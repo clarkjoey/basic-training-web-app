@@ -45,6 +45,6 @@ app.get('/api/chat-messages', (req, res) => {
   ]);
 });
 
-app.listen(3001, () => console.log('API Server running on http://localhost:3001'));
-
-// React frontend would run on port 3000 and call the above endpoints
+// Listen on dynamic port (useful for deployment environments like Render)
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => console.log(`API Server running on http://localhost:${PORT}`));
