@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# 🧪 Basic Training Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple full-stack web app built with **React**, **Tailwind CSS**, and **Node.js/Express**. It is designed as a training demo to help users learn how to use [Replicate](https://docs.reprise.com/) effectively by simulating real-world interactions like logging in, navigating a dashboard, and chatting with a fake AI.
 
-## Available Scripts
+## 🛠 Features
 
-In the project directory, you can run:
+- ✅ Hardcoded login system with token display
+- 📊 Dashboard with dynamic table data
+- 💬 AI Chat Page that fetches fake messages from an API
+- 🎨 Tailwind CSS-powered layout with responsive styling
+- 🧱 Simple backend API endpoints to simulate real app behavior
 
-### `npm start`
+## 📁 Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+basic-training-web-app/
+├── backend/              # Node.js/Express API
+│   ├── server.js
+│   └── routes/
+├── frontend/             # React + Tailwind CSS app
+│   ├── src/
+│   │   ├── App.js
+│   │   ├── Login.js
+│   │   ├── Dashboard.js
+│   │   ├── AiChatPage.js
+│   │   └── index.css
+│   ├── public/
+│   └── tailwind.config.js
+└── README.md
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v18+)
+- npm
 
-### `npm run build`
+### 1. Clone the repo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone https://github.com/clarkjoey/basic-training-web-app.git
+cd basic-training-web-app
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. Install dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Backend
+cd backend
+npm install
 
-### `npm run eject`
+# Frontend
+cd ../frontend
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. Start the app
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# In backend/
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# In another terminal, start the frontend
+cd frontend
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Your app should now be running at:  
+`http://localhost:3000`
 
-## Learn More
+## 🔐 Login Credentials
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Username:** `admin`
+- **Password:** `password`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Once logged in, a token will be displayed and navigation to Dashboard and AI Chat Page will become available.
 
-### Code Splitting
+## 🧪 API Endpoints (Backend)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Method | Route              | Purpose                         |
+|--------|--------------------|----------------------------------|
+| POST   | `/api/auth`        | Authenticates the hardcoded user |
+| GET    | `/api/dashboard`   | Returns simulated dashboard HTML |
+| GET    | `/api/table-data`  | Returns a mock table dataset     |
+| GET    | `/api/other-page`  | Returns AI chat page HTML        |
+| GET    | `/api/chat-messages` | Returns dummy chat messages   |
 
-### Analyzing the Bundle Size
+## 🎨 Styling with Tailwind
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This app uses **Tailwind CSS v4**. Styles are applied via utility classes.  
+No custom CSS is needed unless extending Tailwind.
 
-### Making a Progressive Web App
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This app is intended for internal demo/training use. PRs are welcome to improve the training experience.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📄 License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT – see `LICENSE` file (if needed).
