@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/basic-training-web-app/static/css/main.7a08f09b.css",
+    "main.js": "/basic-training-web-app/static/js/main.ea799360.js",
+    "index.html": "/basic-training-web-app/index.html",
+    "main.7a08f09b.css.map": "/basic-training-web-app/static/css/main.7a08f09b.css.map",
+    "main.ea799360.js.map": "/basic-training-web-app/static/js/main.ea799360.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a08f09b.css",
+    "static/js/main.ea799360.js"
+  ]
+}
